@@ -5,28 +5,28 @@
 class GoPipingServer < Formula
   desc "Piping Server written in Go language"
   homepage "https://github.com/nwtgck/go-piping-server"
-  version "0.2.0"
+  version "0.3.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.2.0/go-piping-server-0.2.0-darwin-amd64.tar.gz"
-    sha256 "f2f8bc553022b66a023b07ea71055e5ddea65fedb8b66395838ed76c5b3fbf81"
+    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.3.0/go-piping-server-0.3.0-darwin-amd64.tar.gz"
+    sha256 "c0cf6abdd3b7d950c1cbcb7565f20ad6827ec9a22b84ec6b541d4cd0d5588c0e"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.2.0/go-piping-server-0.2.0-darwin-arm64.tar.gz"
-    sha256 "8b359dc71806f04c7b0c9fbf48d6a779b1c77170bc2205d31936148e80da5993"
+    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.3.0/go-piping-server-0.3.0-darwin-arm64.tar.gz"
+    sha256 "d19d65fcbfbcaaafce5eb766a046ec8572696ec547af50222a2e9cc4b56ecb97"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.2.0/go-piping-server-0.2.0-linux-amd64.tar.gz"
-    sha256 "7a29d73e5eb7e4bd69cc42448221ef5eb7bdeead78645891debb5faca9a15377"
+    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.3.0/go-piping-server-0.3.0-linux-amd64.tar.gz"
+    sha256 "c0e0a80eba842e63979d4900029411e6b4587f46a89fbefb9491f9333ce275e1"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.2.0/go-piping-server-0.2.0-linux-armv6.tar.gz"
-    sha256 "eb2cb9e186703b182e29653187ee0ca60ba2eaae3f3ceee3da993a92e35130c1"
+    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.3.0/go-piping-server-0.3.0-linux-armv6.tar.gz"
+    sha256 "ecca44e90d8bc9dbdcb793824ad6250b058a2635e5f7b7a560167d3bd03fc99c"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.2.0/go-piping-server-0.2.0-linux-arm64.tar.gz"
-    sha256 "6d42657d8753bbc02180a253bad158960fa2cc724a2d5392a772ad76d9d307a3"
+    url "https://github.com/nwtgck/go-piping-server/releases/download/v0.3.0/go-piping-server-0.3.0-linux-arm64.tar.gz"
+    sha256 "8ea39ff70dc57ae0542590446fa9f9399233b1a02d37025586a5e26b97fb18b6"
   end
 
   def install
