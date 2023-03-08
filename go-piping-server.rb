@@ -5,20 +5,20 @@
 class GoPipingServer < Formula
   desc "Piping Server written in Go language"
   homepage "https://github.com/nwtgck/go-piping-server"
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.4.0/go-piping-server-0.4.0-darwin-arm64.tar.gz"
-      sha256 "368e3a55b95f2ae9f61dfa2ccc8f1158521710e92d0c5ab040b3e4b34d23a4fa"
+      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.5.0/go-piping-server-0.5.0-darwin-arm64.tar.gz"
+      sha256 "6a813bb6948db69b74dc53aa4d3018f5c6622ddacca0c0542e668f4a228b7e30"
 
       def install
         bin.install "go-piping-server"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.4.0/go-piping-server-0.4.0-darwin-amd64.tar.gz"
-      sha256 "c2cda1d617365c22e773acebe60c19bfc8030acad74627208878b46f93e12c7a"
+      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.5.0/go-piping-server-0.5.0-darwin-amd64.tar.gz"
+      sha256 "cbe9653be4ee657290e15bbd670db82b928d531ba97b2bdff322082a7e9c622b"
 
       def install
         bin.install "go-piping-server"
@@ -27,25 +27,25 @@ class GoPipingServer < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.4.0/go-piping-server-0.4.0-linux-amd64.tar.gz"
-      sha256 "ed01cf440988ba9bfa94b6ab7c32d85064ce461057caa65c4a3769e73cd95b35"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.5.0/go-piping-server-0.5.0-linux-arm64.tar.gz"
+      sha256 "c0e37ce02e76b1c830f200a00cc64713a1db2058eff5ae75957536d2a0e8d40d"
 
       def install
         bin.install "go-piping-server"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.4.0/go-piping-server-0.4.0-linux-arm64.tar.gz"
-      sha256 "a5499f354afefeffb4f06149bbf89c056ea22d6e33f0ecb0bec7e2f361842775"
+    if Hardware::CPU.intel?
+      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.5.0/go-piping-server-0.5.0-linux-amd64.tar.gz"
+      sha256 "593de8cdece1512aaf735858fcc4c4e507c1bd8ec68c468ec763726a60dbd0ad"
 
       def install
         bin.install "go-piping-server"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.4.0/go-piping-server-0.4.0-linux-armv6.tar.gz"
-      sha256 "d4661e61c17530ccedd9be25bc5e5610d7b9ed300d8a0f9adcd6cf30d98056e0"
+      url "https://github.com/nwtgck/go-piping-server/releases/download/v0.5.0/go-piping-server-0.5.0-linux-armv6.tar.gz"
+      sha256 "cb5bb28c8bb1bf6a0c26762441c9921b50ebd45fd73f57eaea6c088956586075"
 
       def install
         bin.install "go-piping-server"
